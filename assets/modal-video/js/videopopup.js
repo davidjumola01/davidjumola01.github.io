@@ -56,14 +56,24 @@
             });
         });
 
-        $("#closer_videopopup").on('click', function () {
+        settings.closer.listener = function() {
+            closerFunc()
+        }
+
+        var closerFunc = function() {
             if(settings.pausevideo==true){
-                    $('#'+settings.idvideo+'').trigger('pause');
-                }else{
-                    stopVideo();
-                }
+                $('#'+settings.idvideo+'').trigger('pause');
+            }else{
+                stopVideo();
+            }
             $('#' + patter + "").hide();
+        }
+
+
+        $("#closer_videopopup").on('click', function () {
+            closerFunc()
         });
+
         return this.css({
 
         });

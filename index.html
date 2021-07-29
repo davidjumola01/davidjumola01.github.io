@@ -95,6 +95,23 @@
         <p class="author">Robert Pickering, Founder</p>
     </div>
 
+    <div class="row flex-row-container">
+        <div class="col-md-6" style="width: 500px;">
+            <h4><img src="assets/image/smile.webp" alt="" height="36"> RealTime Reporting</h4>
+            <h4><img src="assets/image/smile.webp" alt="" height="36"> All in one business app</h4>
+            <h4><img src="assets/image/smile.webp" alt="" height="36"> Shared Community</h4>
+        </div>
+        <div class="col-md-6" style="width: 500px;">
+            <h4><img src="assets/image/smile.webp" alt="" height="36"> Personal Video Playlist</h4>
+            <h4><img src="assets/image/smile.webp" alt="" height="36"> Mobile Referral Tool</h4>
+            <h4><img src="assets/image/smile.webp" alt="" height="36"> Show off your work through Photos</h4>
+        </div>
+    </div>
+
+
+
+    <!-- VIDEO PLAYER MODAL -->
+
     <div id="vidBox">
         <div id="videCont">
             <video autoplay id="v1" loop controls>
@@ -107,22 +124,61 @@
    
     <script>
 
+        function Closer() {
+            this.listener = function() {}
+        }
+
         var opener = '';
+        var closer = new Closer()
 
         $(function () {
+
+            document.addEventListener("fullscreenchange", function () {
+                if (!document.fullscreen) {
+                    closer.listener()
+                }
+            }, false);
+
+            document.addEventListener("mozfullscreenchange", function () {                
+                if (!document.fullscreen) {
+                    closer.listener()
+                }
+            }, false);
+
+            document.addEventListener("webkitfullscreenchange", function () {                
+                if (!document.fullscreen) {
+                    closer.listener()
+                }
+            }, false);
+
             $('#vidBox').VideoPopUp({
                 backgroundColor: "#17212a",
                 opener: "nav2-link",
                 pausevideo: true,
                 maxweight: "640",
                 idvideo: "v1",
+                closer: closer,
                 openerCallback: function(e) {
                     if (opener !== e.attr('id')) {
                         opener = e.attr('id')
                         $('#v1').attr('src', e.attr('video-src'))
                     }
-                }
+
+                    openFullscreen()
+                },
+                
             });
+
+            function openFullscreen() {
+                var elem = document.getElementById("v1");
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.webkitRequestFullscreen) { /* Safari */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE11 */
+                    elem.msRequestFullscreen();
+                }
+            }
         });
         
 
