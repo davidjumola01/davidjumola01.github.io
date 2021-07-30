@@ -10,102 +10,205 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/modal-video/css/videopopup.css" media="screen" />
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/modal-video/js/videopopup.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dimgray">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/image/knocard-logo.webp" alt="" height="36">
+    <div class="nav-fix">
+        <nav class="navbar navbar-expand-lg bg-dimgray">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/image/knocard-logo.webp" alt="" height="36">
+                </a>
+    
+                <a class="text-white nounderline" href="#">
+                    Sign In
+                    <img src="assets/image/knocard-lock.webp" alt="" height="36">
+                </a>
+              
+            </div>
+        </nav>
+    
+        <nav class="navbar navbar-light navbar-expand-sm bg-light">
+            <!-- <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" style="margin-right: 10px;" type="button" data-trigger="#main_nav">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="navbar-collapse justify-content-center bg-light" id="main_nav">
+                <!-- <div class="offcanvas-header mt-3">  
+                    <button class="btn btn-outline-danger btn-close float-right"> </button>
+                </div> -->
+                 <!-- <div class="offcanvas-header mt-3">  
+                    <button class="btn btn-outline-danger btn-close float-right"> </button>
+                </div> -->
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link nav2-link" href="#overview">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav2-link" href="#reporting">Reporting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav2-link" href="#playlist" >Playlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav2-link" href="#photo">Photo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav2-link" href="#sharing">Sharing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav2-link" href="#community">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav2-link" href="#snap">Snap & Share</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <a class="anchor" id="home"></a>
+    <div class="content">
+        <div class="flex-row-container">
+            <h6>Get it FREE Today</h6>
+            <a href="https://apps.apple.com/us/app/knocard/id1495206208" target="_blank">
+                <img src="assets/image/itunes-store.webp" alt="" >
             </a>
-
-            <a class="text-white nounderline" href="#">
-                Sign In
-                <img src="assets/image/knocard-lock.webp" alt="" height="36">
+            <a href="https://play.google.com/store/apps/details?id=com.knocard.vbc" target="_blank">
+                <img src="assets/image/play-store.webp" alt="">
             </a>
-          
         </div>
-    </nav>
+    
+        <div class="bg-light" style="padding-top: 30px; padding-bottom: 30px; margin-top: 16px;">
+            <div class="flex-row-container">
+                <div>
+                    <img src="assets/image/start.png" height="33" alt="">
+                    <img src="assets/image/start.png" height="33" alt="">
+                    <img src="assets/image/start.png" height="33" alt="">
+                </div>
+                <h1 class="best">2021 Best Business App</h1>
+                <div>
+                    <img src="assets/image/start.png" height="33" alt="">
+                    <img src="assets/image/start.png" height="33" alt="">
+                    <img src="assets/image/start.png" height="33" alt="">
+                </div>
+            </div>
+        
+            <div class="container desc">
+                "KnoCard will grow and expose your business like no other mobile app! Traditional marketing is dead and has been for some time.  Social marketing through advanced mobile technology is the only way to grow your business...period."
+                <p class="author">Robert Pickering, Founder</p>
+            </div>
+        
+            <div class="flex-row-container" style="margin-top: 50px;">
+                <div class="col-md-6" style="width: 500px;">
+                    <h4><img src="assets/image/smile.webp" alt="" height="40"> RealTime Reporting</h4>
+                    <h4><img src="assets/image/smile.webp" alt="" height="40"> All in one business app</h4>
+                    <h4><img src="assets/image/smile.webp" alt="" height="40"> Shared Community</h4>
+                </div>
+                <div class="col-md-6" style="width: 500px;">
+                    <h4><img src="assets/image/smile.webp" alt="" height="40"> Personal Video Playlist</h4>
+                    <h4><img src="assets/image/smile.webp" alt="" height="40"> Mobile Referral Tool</h4>
+                    <h4><img src="assets/image/smile.webp" alt="" height="40"> Show off your work through Photos</h4>
+                </div>
+            </div>
+            
+            <div class="flex-row-container" style="margin-top: 50px;">
+                <img src="assets/image/video2.webp" alt="" style="max-height: 338px; max-width: 600px;" >
+            </div>
+            
+        </div>
 
-    <nav class="navbar navbar-light navbar-expand-sm bg-light">
-        <!-- <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" style="margin-right: 10px;" type="button" data-trigger="#main_nav">
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
-        <div class="navbar-collapse justify-content-center bg-light" id="main_nav">
-            <!-- <div class="offcanvas-header mt-3">  
-                <button class="btn btn-outline-danger btn-close float-right"> </button>
-            </div> -->
-             <!-- <div class="offcanvas-header mt-3">  
-                <button class="btn btn-outline-danger btn-close float-right"> </button>
-            </div> -->
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link nav2-link" href="javascript:void(0)" id="overview" video-src="assets/video/KnocardPromo.mp4">Overview</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav2-link" href="javascript:void(0)" id="reporting" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FReporting.mp4?alt=media&token=aa3f9fd0-9a43-423f-9007-53f268ba5b76">Reporting</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav2-link" href="javascript:void(0)" id="playlist" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fvideo_playlist_compress2.mp4?alt=media&token=c4637ddf-d95c-4a61-97ab-564aadca1257">Playlist</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav2-link" href="javascript:void(0)" id="photo-gallery" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8">Photo</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav2-link" href="javascript:void(0)" id="sharing" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FSharing_KnoCard.mp4?alt=media&token=ee1f62b1-4877-482e-a8e7-2536ca751298">Sharing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav2-link" href="javascript:void(0)" id="community" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8">Community</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav2-link" href="javascript:void(0)" id="snap" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8">Snap & Share</a>
-                </li>
-            </ul>
+        <a class="anchor" id="overview"></a>
+        <div class="video-contanier bg-light" id="opener1" video-src="assets/video/KnocardPromo.mp4">
+            <div class="background">Overview</div>
+            <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
         </div>
-    </nav>
 
-    <div class="flex-row-container">
-        <h6>Get it FREE Today</h6>
-        <a href="https://apps.apple.com/us/app/knocard/id1495206208" target="_blank">
-            <img src="assets/image/itunes-store.webp" alt="" height="55">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.knocard.vbc" target="_blank">
-            <img src="assets/image/play-store.webp" alt="" height="55">
-        </a>
-    </div>
+        <a class="anchor" id="reporting"></a>
+        <div class="video-contanier bg-light" id="opener2" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FReporting.mp4?alt=media&token=aa3f9fd0-9a43-423f-9007-53f268ba5b76">
+            <div class="background">Reporting</div>
+            <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
+        </div>
 
-    <div class="flex-row-container">
-        <div>
-            <img src="assets/image/start.png" height="33" alt="">
-            <img src="assets/image/start.png" height="33" alt="">
-            <img src="assets/image/start.png" height="33" alt="">
+        <a class="anchor" id="playlist"></a>
+        <div class="video-contanier bg-light" id="opener3" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fvideo_playlist_compress2.mp4?alt=media&token=c4637ddf-d95c-4a61-97ab-564aadca1257">
+            <div class="background">Playlist</div>
+            <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
         </div>
-        <h1 class="best">2021 Best Business App</h1>
-        <div>
-            <img src="assets/image/start.png" height="33" alt="">
-            <img src="assets/image/start.png" height="33" alt="">
-            <img src="assets/image/start.png" height="33" alt="">
-        </div>
-    </div>
 
-    <div class="container desc">
-        "KnoCard will grow and expose your business like no other mobile app! Traditional marketing is dead and has been for some time.  Social marketing through advanced mobile technology is the only way to grow your business...period."
-        <p class="author">Robert Pickering, Founder</p>
-    </div>
+        <a class="anchor" id="photo"></a>
+        <div class="video-contanier bg-light" id="opener4" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8">
+            <div class="background">Photos</div>
+            <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
+        </div>
 
-    <div class="row flex-row-container">
-        <div class="col-md-6" style="width: 500px;">
-            <h4><img src="assets/image/smile.webp" alt="" height="36"> RealTime Reporting</h4>
-            <h4><img src="assets/image/smile.webp" alt="" height="36"> All in one business app</h4>
-            <h4><img src="assets/image/smile.webp" alt="" height="36"> Shared Community</h4>
+        <a class="anchor" id="sharing"></a>
+        <div class="video-contanier bg-light" id="opener5" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FSharing_KnoCard.mp4?alt=media&token=ee1f62b1-4877-482e-a8e7-2536ca751298">
+            <div class="background">Sharing</div>
+            <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
         </div>
-        <div class="col-md-6" style="width: 500px;">
-            <h4><img src="assets/image/smile.webp" alt="" height="36"> Personal Video Playlist</h4>
-            <h4><img src="assets/image/smile.webp" alt="" height="36"> Mobile Referral Tool</h4>
-            <h4><img src="assets/image/smile.webp" alt="" height="36"> Show off your work through Photos</h4>
+
+        <a class="anchor" id="community"></a>
+        <div class="video-contanier bg-light" id="opener6" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8">
+            <div class="background">Community</div>
+            <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
         </div>
+
+        <a class="anchor" id="snap"></a>
+        <div class="video-contanier bg-light" id="opener7" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8">
+            <div class="background">Snap and Share</div>
+            <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
+        </div>
+
+        <div class="footer">
+            <div class="top-footer">
+                <div class="top-footer-item">
+                    <h4>Browse</h4>
+                    <ul style="list-style-type:none; padding: 0 !important;">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#reporting">Reporting</a></li>
+                        <li><a href="#playlist">Playlist</a></li>
+                        <li><a href="#photo">Photos</a></li>
+                        <li><a href="#sharing">Sharing</a></li>
+                        <li><a href="#community">Community</a></li>
+                        <li><a href="#snap">Snap & Share</a></li>
+                    </ul>
+                </div>
+                <div class="top-footer-item">
+                    <h4>Hours</h4>
+                    <ul style="list-style-type:none; padding: 0;">
+                        <li>MON:  9:00am-6:00pm EST</li>
+                        <li>TUES:  9:00am-6:00pm EST</li>
+                        <li>WED:  9:00am-6:00pm EST</li>
+                        <li>THURS:  9:00am-6:00pm EST</li>
+                        <li>FRI:  9:00am-6:00pm EST</li>
+                        <li>SAT:  9:00am-2:00pm EST</li>
+                    </ul>
+                </div>
+                <div class="top-footer-item">
+                    <h4>Contact</h4>
+                    <ul style="list-style-type:none; padding: 0;">
+                        <li>KnoCard LLC<br>
+                            Macedonia, OH, USA</li>
+                        <li><br>Support@Knocard.com</li>
+                    </ul>
+                </div>
+                <div class="top-footer-item">
+                    <h4>Locate</h4>
+                    <img src="assets/image/location.png" alt="" height="240px" width="170px">
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <ul style="list-style: none; margin-top: 20px;">
+                    <li style="display: inline;"><a href="#">Term of use</a></li>
+                    <li style="display: inline;"><b>|</b></li>
+                    <li style="display: inline;"><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
     </div>
 
 
@@ -153,7 +256,7 @@
 
             $('#vidBox').VideoPopUp({
                 backgroundColor: "#17212a",
-                opener: "nav2-link",
+                opener: "video-contanier",
                 pausevideo: true,
                 maxweight: "640",
                 idvideo: "v1",
@@ -179,6 +282,7 @@
                     elem.msRequestFullscreen();
                 }
             }
+
         });
         
 
