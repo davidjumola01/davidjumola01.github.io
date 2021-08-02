@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Mobile Reseller</title>
 
     <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"> -->
@@ -15,9 +18,18 @@
     <script src="assets/modal-video/js/videopopup.js"></script>
 </head>
 <body>
+
+    <!--  Header nav and sidebar -->
     <div class="nav-fix">
         <nav class="navbar navbar-expand-lg bg-dimgray">
             <div class="container">
+
+                <div class="burger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                
                 <a class="navbar-brand" href="#">
                     <img src="assets/image/knocard-logo.webp" alt="" height="36">
                 </a>
@@ -29,19 +41,10 @@
               
             </div>
         </nav>
-    
-        <nav class="navbar navbar-light navbar-expand-sm bg-light">
-            <!-- <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" style="margin-right: 10px;" type="button" data-trigger="#main_nav">
-              <span class="navbar-toggler-icon"></span>
-            </button> -->
+        
+        <!-- Top bar nav -->
+        <nav class="topbar navbar navbar-light navbar-expand-sm bg-light">
             <div class="navbar-collapse justify-content-center bg-light" id="main_nav">
-                <!-- <div class="offcanvas-header mt-3">  
-                    <button class="btn btn-outline-danger btn-close float-right"> </button>
-                </div> -->
-                 <!-- <div class="offcanvas-header mt-3">  
-                    <button class="btn btn-outline-danger btn-close float-right"> </button>
-                </div> -->
                 <ul class="navbar-nav">
                     <li class="nav-item active">
                         <a class="nav-link nav2-link" href="#overview">Overview</a>
@@ -69,18 +72,38 @@
         </nav>
     </div>
 
+    <!-- Sidebar nav -->
+    <div class="sidebar">
+        <button class="close">&times;</button>
+        <ul style="list-style-type:none; padding-left: 0; margin-top: 40px;">
+            <li class="sb-item"><a href="#overview">Overview</a></li>
+            <li class="sb-item"><a href="#reporting">Reporting</a></li>
+            <li class="sb-item"><a href="#playlist">Playlist</a></li>
+            <li class="sb-item"><a href="#photo">Photos</a></li>
+            <li class="sb-item"><a href="#sharing">Sharing</a></li>
+            <li class="sb-item"><a href="#community">Community</a></li>
+            <li class="sb-item"><a href="#snap">Snap & Share</a></li>
+        </ul>
+    </div>
+
+    <!--  End header nav and sidebar -->
+
     <a class="anchor" id="home"></a>
     <div class="content">
-        <div class="flex-row-container">
+
+        <!-- App store links -->
+        <div class="app-store">
             <h6>Get it FREE Today</h6>
-            <a href="https://apps.apple.com/us/app/knocard/id1495206208" target="_blank">
-                <img src="assets/image/itunes-store.webp" alt="" >
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.knocard.vbc" target="_blank">
-                <img src="assets/image/play-store.webp" alt="">
-            </a>
+            <div class="store-link">
+                <a href="https://apps.apple.com/us/app/knocard/id1495206208" target="_blank">
+                    <img class="app-store-link-img" src="assets/image/itunes-store.webp" alt=""  >
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.knocard.vbc" target="_blank">
+                    <img class="app-store-link-img" src="assets/image/play-store.webp" alt="">
+                </a>
+            </div>
         </div>
-    
+
         <div class="bg-light" style="padding-top: 30px; padding-bottom: 30px; margin-top: 16px;">
             <div class="flex-row-container">
                 <div>
@@ -101,64 +124,87 @@
                 <p class="author">Robert Pickering, Founder</p>
             </div>
         
-            <div class="flex-row-container" style="margin-top: 50px;">
-                <div class="col-md-6" style="width: 500px;">
-                    <h4><img src="assets/image/smile.webp" alt="" height="40"> RealTime Reporting</h4>
-                    <h4><img src="assets/image/smile.webp" alt="" height="40"> All in one business app</h4>
-                    <h4><img src="assets/image/smile.webp" alt="" height="40"> Shared Community</h4>
-                </div>
-                <div class="col-md-6" style="width: 500px;">
-                    <h4><img src="assets/image/smile.webp" alt="" height="40"> Personal Video Playlist</h4>
-                    <h4><img src="assets/image/smile.webp" alt="" height="40"> Mobile Referral Tool</h4>
-                    <h4><img src="assets/image/smile.webp" alt="" height="40"> Show off your work through Photos</h4>
+            <div class="feature-container">
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h5><img src="assets/image/smile.webp" alt="" height="40"> RealTime Reporting</h5>
+                        <h5><img src="assets/image/smile.webp" alt="" height="40"> All in one business app</h5>
+                        <h5><img src="assets/image/smile.webp" alt="" height="40"> Shared Community</h5>
+                    </div>
+                    <div class="feature-item">
+                        <h5><img src="assets/image/smile.webp" alt="" height="40"> Personal Video Playlist</h5>
+                        <h5><img src="assets/image/smile.webp" alt="" height="40"> Mobile Referral Tool</h5>
+                        <h5><img src="assets/image/smile.webp" alt="" height="40"> Show off your work through Photos</h5>
+                    </div>
                 </div>
             </div>
             
             <div class="flex-row-container" style="margin-top: 50px;">
-                <img src="assets/image/video2.webp" alt="" style="max-height: 338px; max-width: 600px;" >
+                <img class="resp-img" src="assets/image/video2.webp" alt="">
             </div>
             
         </div>
 
         <a class="anchor" id="overview"></a>
-        <div class="video-contanier bg-light" id="opener1" video-src="assets/video/KnocardPromo.mp4">
-            <div class="background">Overview</div>
+        <div class="video-contaner bg-light" id="opener1" video-src="assets/video/KnocardPromo.mp4">
+            <!-- <div class="background">Overview</div> -->
+            <video class="video-player" autoplay controls>
+                <source src="assets/video/KnocardPromo.mp4" type="video/mp4">
+            </video>
             <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
         </div>
 
         <a class="anchor" id="reporting"></a>
-        <div class="video-contanier bg-light" id="opener2" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FReporting.mp4?alt=media&token=aa3f9fd0-9a43-423f-9007-53f268ba5b76">
-            <div class="background">Reporting</div>
+        <div class="video-contaner bg-light" id="opener2" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FReporting.mp4?alt=media&token=aa3f9fd0-9a43-423f-9007-53f268ba5b76">
+            <!-- <div class="background">Reporting</div> -->
+            <video class="video-player" autoplay controls>
+                <source src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FReporting.mp4?alt=media&token=aa3f9fd0-9a43-423f-9007-53f268ba5b76" type="video/mp4">
+            </video>
             <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
         </div>
 
         <a class="anchor" id="playlist"></a>
-        <div class="video-contanier bg-light" id="opener3" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fvideo_playlist_compress2.mp4?alt=media&token=c4637ddf-d95c-4a61-97ab-564aadca1257">
-            <div class="background">Playlist</div>
+        <div class="video-contaner bg-light" id="opener3" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fvideo_playlist_compress2.mp4?alt=media&token=c4637ddf-d95c-4a61-97ab-564aadca1257">
+            <!-- <div class="background">Playlist</div> -->
+            <video class="video-player" autoplay controls>
+                <source src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fvideo_playlist_compress2.mp4?alt=media&token=c4637ddf-d95c-4a61-97ab-564aadca1257" type="video/mp4">
+            </video>
             <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
         </div>
 
         <a class="anchor" id="photo"></a>
-        <div class="video-contanier bg-light" id="opener4" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8">
-            <div class="background">Photos</div>
+        <div class="video-contaner bg-light" id="opener4" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8">
+            <!-- <div class="background">Photos</div> -->
+            <video class="video-player" autoplay controls>
+                <source src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8" type="video/mp4">
+            </video>
             <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
         </div>
 
         <a class="anchor" id="sharing"></a>
-        <div class="video-contanier bg-light" id="opener5" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FSharing_KnoCard.mp4?alt=media&token=ee1f62b1-4877-482e-a8e7-2536ca751298">
-            <div class="background">Sharing</div>
+        <div class="video-contaner bg-light" id="opener5" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FSharing_KnoCard.mp4?alt=media&token=ee1f62b1-4877-482e-a8e7-2536ca751298">
+            <!-- <div class="background">Sharing</div> -->
+            <video class="video-player" autoplay controls>
+                <source src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FSharing_KnoCard.mp4?alt=media&token=ee1f62b1-4877-482e-a8e7-2536ca751298https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FSharing_KnoCard.mp4?alt=media&token=ee1f62b1-4877-482e-a8e7-2536ca751298" type="video/mp4">
+            </video>
             <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
         </div>
 
         <a class="anchor" id="community"></a>
-        <div class="video-contanier bg-light" id="opener6" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8">
-            <div class="background">Community</div>
+        <div class="video-contaner bg-light" id="opener6" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8">
+            <!-- <div class="background">Community</div> -->
+            <video class="video-player" autoplay controls>
+                <source src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8" type="video/mp4">
+            </video>
             <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
         </div>
 
         <a class="anchor" id="snap"></a>
-        <div class="video-contanier bg-light" id="opener7" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8">
-            <div class="background">Snap and Share</div>
+        <div class="video-contaner bg-light" id="opener7" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8">
+            <!-- <div class="background">Snap and Share</div> -->
+            <video class="video-player" autoplay controls>
+                <source src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8" type="video/mp4">
+            </video>
             <p>Learn how reporting can give you a HUGE advantage of your competitors.  This reporting will provide real time reports so you are NEVER guessing what your prospect is doing.  Data is everything!</p>
         </div>
 
@@ -166,7 +212,7 @@
             <div class="top-footer">
                 <div class="top-footer-item">
                     <h4>Browse</h4>
-                    <ul style="list-style-type:none; padding: 0 !important;">
+                    <ul style="list-style-type:none; padding: 0;">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#reporting">Reporting</a></li>
                         <li><a href="#playlist">Playlist</a></li>
@@ -203,7 +249,7 @@
             <div class="bottom-footer">
                 <ul style="list-style: none; margin-top: 20px;">
                     <li style="display: inline;"><a href="#">Term of use</a></li>
-                    <li style="display: inline;"><b>|</b></li>
+                    <li style="display: inline;"><b>&nbsp;&nbsp;|&nbsp;&nbsp;</b></li>
                     <li style="display: inline;"><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
@@ -211,8 +257,8 @@
 
     </div>
 
-
-
+    
+    
     <!-- VIDEO PLAYER MODAL -->
 
     <div id="vidBox">
@@ -224,7 +270,6 @@
     </div>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-   
     <script>
 
         function Closer() {
@@ -235,6 +280,21 @@
         var closer = new Closer()
 
         $(function () {
+
+            $('.burger').on('click', function() {
+                $('.sidebar').show()
+            })
+
+            $('.close').on('click', function() {
+                $('.sidebar').hide()
+            })
+
+            $('.sb-item').each(function(){
+                $(this).on('click', function () {
+                    $('.sidebar').hide()
+                });
+            });
+
 
             document.addEventListener("fullscreenchange", function () {
                 if (!document.fullscreen) {
@@ -256,7 +316,7 @@
 
             $('#vidBox').VideoPopUp({
                 backgroundColor: "#17212a",
-                opener: "video-contanier",
+                opener: "video-contanerss",
                 pausevideo: true,
                 maxweight: "640",
                 idvideo: "v1",
@@ -287,6 +347,5 @@
         
 
     </script>
-
 </body>
 </html>
