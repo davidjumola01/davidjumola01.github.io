@@ -165,7 +165,7 @@
         <div class="video-contaner bg-light" id="opener2" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FReporting.mp4?alt=media&token=aa3f9fd0-9a43-423f-9007-53f268ba5b76">
             <div class="video-wrap">
                 <!-- <div class="video-text">Reporting</div> -->
-                <video playsinline class="video-player" controls poster="assets/image/reporting.png">
+                <video id="vid1" playsinline class="video-player" controls poster="assets/image/reporting.png">
                     <source src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FReporting.mp4?alt=media&token=aa3f9fd0-9a43-423f-9007-53f268ba5b76" type="video/mp4">
                 </video>
             </div>
@@ -184,7 +184,7 @@
         <div class="video-contaner bg-light" id="opener3" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fvideo_playlist_compress2.mp4?alt=media&token=c4637ddf-d95c-4a61-97ab-564aadca1257">
             <div class="video-wrap">
                 <!-- <div class="video-text">Playlist</div> -->
-                <video playsinline class="video-player" controls poster="assets/image/photos.png">
+                <video id="vid2" playsinline class="video-player" controls poster="assets/image/photos.png">
                     <source src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fvideo_playlist_compress2.mp4?alt=media&token=c4637ddf-d95c-4a61-97ab-564aadca1257" type="video/mp4">
                 </video>
             </div>
@@ -202,7 +202,7 @@
         <div class="video-contaner bg-light" id="opener4" video-src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8">
             <div class="video-wrap">
                 <!-- <div class="video-text">Photos</div> -->
-                <video playsinline class="video-player" controls poster="assets/image/playlist.png">
+                <video id="vid3" playsinline class="video-player" controls poster="assets/image/playlist.png">
                     <source src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8" type="video/mp4">
                 </video>
             </div>
@@ -221,7 +221,7 @@
             <!-- <div class="background">Sharing</div> -->
             <div class="video-wrap">
                 <!-- <div class="video-text">Sharing</div> -->
-                <video playsinline class="video-player" controls poster="assets/image/sharing.png">
+                <video id="vid4" playsinline class="video-player" controls poster="assets/image/sharing.png">
                     <source src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FSharing_KnoCard.mp4?alt=media&token=ee1f62b1-4877-482e-a8e7-2536ca751298https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2FSharing_KnoCard.mp4?alt=media&token=ee1f62b1-4877-482e-a8e7-2536ca751298" type="video/mp4">
                 </video>
             </div>
@@ -241,7 +241,7 @@
             <!-- <div class="background">Community</div> -->
             <div class="video-wrap">
                 <!-- <div class="video-text">Community</div> -->
-                <video playsinline class="video-player" controls poster="assets/image/community.png">
+                <video id="vid5" playsinline class="video-player" controls poster="assets/image/community.png">
                     <source src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8" type="video/mp4">
                 </video>
             </div>
@@ -260,7 +260,7 @@
             <!-- <div class="background">Snap and Share</div> -->
             <div class="video-wrap">
                 <!-- <div class="video-text">Snap and Share</div> -->
-                <video playsinline class="video-player" controls poster="assets/image/snap.png">
+                <video id="vid6" playsinline class="video-player" controls poster="assets/image/snap.png">
                     <source src="https://firebasestorage.googleapis.com/v0/b/knocard-da3f9.appspot.com/o/newVideos%2Fphoto_gallery_compress.mp4?alt=media&token=80b14084-9d5f-42ef-afe4-e718a2cb82c8" type="video/mp4">
                 </video>
             </div>
@@ -317,7 +317,7 @@
                     <li style="display: inline;"><b><div class="hdiv"></div></b></li>
                     <li style="display: inline;"><a href="http://knocard.com/privacypolicy">Privacy Policy</a></li>
                     <li style="display: inline;"><b><div class="hdiv"></div></b></li>
-                    <li style="display: inline;"><a target="_blank" href="file:///C:/Users/Dearwolves/Desktop/Dearwolves/Project/Knocard/pages//support.html">Support</a></li>
+                    <li style="display: inline;"><a target="_blank" href="https://davidjumola01.github.io/support.html">Support</a></li>
                 </ul>
             </div>
         </div>
@@ -339,18 +339,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script>
 
-        function Closer() {
-            this.listener = function() {}
-        }
-
-        var opener = '';
-        var closer = new Closer()
-
         $(function () {
 
-            // $(document).scroll( function(){  
-            //     console.log('Testing croll event');
-            // });
+            var playingVid = null;
 
             $('.burger').on('click', function() {
                 $('.sidebar').show()
@@ -373,6 +364,9 @@
                         $(this).get(0).pause()
                     }
                 })
+
+                openFullscreen(document.getElementById("overview-vid"))
+                playingVid = $(this).get(0);
             })
 
 
@@ -389,54 +383,45 @@
 
                         $('#overview-vid').get(0).pause()
                     })
+
+                    openFullscreen(document.getElementById($(this).attr('id')))
+                    playingVid = $(this).get(0);
                 })
 
             });
 
             document.addEventListener("fullscreenchange", function () {
                 if (!document.fullscreen) {
-                    closer.listener()
+                    pauseVideo()
                 }
             }, false);
 
             document.addEventListener("mozfullscreenchange", function () {                
                 if (!document.fullscreen) {
-                    closer.listener()
+                    pauseVideo()
                 }
             }, false);
 
             document.addEventListener("webkitfullscreenchange", function () {                
                 if (!document.fullscreen) {
-                    closer.listener()
+                    pauseVideo()
                 }
             }, false);
 
-            $('#vidBox').VideoPopUp({
-                backgroundColor: "#17212a",
-                opener: "video-contanerss",
-                pausevideo: true,
-                maxweight: "640",
-                idvideo: "v1",
-                closer: closer,
-                openerCallback: function(e) {
-                    if (opener !== e.attr('id')) {
-                        opener = e.attr('id')
-                        $('#v1').attr('src', e.attr('video-src'))
-                    }
-
-                    openFullscreen()
-                },
-                
-            });
-
-            function openFullscreen() {
-                var elem = document.getElementById("v1");
+            function openFullscreen(elem) {
+                // var elem = document.getElementById("v1");
                 if (elem.requestFullscreen) {
                     elem.requestFullscreen();
                 } else if (elem.webkitRequestFullscreen) { /* Safari */
                     elem.webkitRequestFullscreen();
                 } else if (elem.msRequestFullscreen) { /* IE11 */
                     elem.msRequestFullscreen();
+                }
+            }
+
+            function pauseVideo() {
+                if (playingVid !== null) {
+                    playingVid.pause()
                 }
             }
 
