@@ -11,15 +11,17 @@
     <link rel="stylesheet" type="text/css" href="assets/modal-video/css/videopopup.css" media="screen" />
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="assets/modal-video/js/videopopup.js"></script>
 </head>
 <body>
+    <!--  Header nav and sidebar -->
     <div class="nav-fix">
         <nav class="navbar navbar-expand-lg bg-dimgray">
             <div class="container">
 
                 <div class="burger">
-                    
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
                 
                 <a class="navbar-brand" href="#">
@@ -33,25 +35,137 @@
               
             </div>
         </nav>
+        
+        <!-- Top bar nav -->
+        <nav class="topbar navbar navbar-light navbar-expand-sm bg-light">
+            <div class="navbar-collapse justify-content-center bg-light" id="main_nav">
+                <ul class="navbar-nav">
+                    <!-- <li class="nav-item active">
+                        <a class="nav-link nav2-link" href="https://davidjumola01.github.io/index.html#overview">Overview</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link nav2-link" href="https://davidjumola01.github.io/index.html#reporting">Reporting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav2-link" href="https://davidjumola01.github.io/index.html#playlist" >Playlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav2-link" href="https://davidjumola01.github.io/index.html#photo">Photo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav2-link" href="https://davidjumola01.github.io/index.html#sharing">Sharing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav2-link" href="https://davidjumola01.github.io/index.html#community">Community</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link nav2-link" href="https://davidjumola01.github.io/index.html#snap">Snap & Share</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link nav2-link" href="https://davidjumola01.github.io/support.html">Support</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
+
+    <!-- Sidebar nav -->
+    <div class="sidebar">
+        <button class="close">&times;</button>
+        <ul style="list-style-type:none; padding-left: 0; margin-top: 40px;">
+            <!-- <li class="sb-item"><a href="#overview">Overview</a></li> -->
+            <li class="sb-item"><a href="https://davidjumola01.github.io/index.html#reporting">Reporting</a></li>
+            <li class="sb-item"><a href="https://davidjumola01.github.io/index.html#playlist">Playlist</a></li>
+            <li class="sb-item"><a href="https://davidjumola01.github.io/index.html#photo">Photos</a></li>
+            <li class="sb-item"><a href="https://davidjumola01.github.io/index.html#sharing">Sharing</a></li>
+            <li class="sb-item"><a href="https://davidjumola01.github.io/index.html#community">Community</a></li>
+            <!-- <li class="sb-item"><a href="#snap">Snap & Share</a></li> -->
+            <li class="sb-item">
+                <a href="https://davidjumola01.github.io/support.html">Support</a>
+            </li>
+        </ul>
+    </div>
+    <!--  End header nav and sidebar -->
 
     <div class="content">
 
         <div class="container support">
+            <div id="success" class="alert alert-success alert-dismissible" style="display: none;">
+                Your request has been received and will be answered via Email.
+                <a href="#" class="close" data-dismiss="alert" aria-label="close" style="float: right; text-decoration: none;">&times;</a>
+            </div>
+
             <h5>Customer Support</h5>
             <h6>Your Feedback is Crucial</h6>
             <h6>How May We Help</h6>
 
             <div>
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Please Select
-                    <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li>Technical Support</li>
-                        <li>Billing</li>
-                        <li><a href="#">JavaScript</a></li>
-                    </ul>
-                </div>
+                <form>
+
+                    <div class="form-group">
+                        <select id="support_select" onchange="onSupportSelectChange()" class="form-select" aria-label="Default select example">
+                            <option selected>Please Select</option>
+                            <option value="Technical Support">Technical Support</option>
+                            <option value="Billing">Billing</option>
+                            <option value="Suggestions">Suggestions</option>
+                            <option value="Contact Corporate">Contact Corporate</option>
+                            <option value="Report a Bug">Report a Bug</option>
+                        </select>
+                        <small id="titleErr" class="error" for="">Please choose "How May We Help"</small>
+                    </div>
+
+                    <!-- Page -->
+                    <div id="page_select">
+                        <div class="form-group">
+                            <label class="form-label" for="">Page</label>
+                            <select id="selected_page" onchange="onPageChange()" class="form-select" aria-label="Default select example">
+                                <option selected>Please Select</option>
+                                <option value="Login">Login</option>
+                                <option value="Setup">Setup</option>
+                                <option value="Playlist">Playlist</option>
+                                <option value="Photo Gallery">Photo Gallery</option>
+                                <option value="Business Page">Business Page</option>
+                                <option value="Sharing">Sharing</option>
+                                <option value="Reporting">Reporting</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <small id="pageErr" class="error" for="">Please select page</small>
+                        </div>
+
+                        <div id="report_bug">
+                            <div class="form-group">
+                                <label class="form-label" for="">Device/Model (optional)</label>
+                                <input id="device" type="text" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="">KnoCard Version (optional)</label>
+                                <input id="version" type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="">Email</label>
+                        <input onchange="onEmailChange()" id="email" type="email" class="form-control">
+                        <small id="emailErr" class="error" for="">Please enter your email</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="">Description</label><br>
+                        <textarea id="description" rows="8" style="width: 100%;"></textarea>
+                        <small id="descErr" class="error" for="">Please enter description"</small>
+                    </div><br>
+
+                    <button type="button" id="submit" class="btn btn-primary" style="width: 170px;">
+                        <span id="submit_text">Submit</span>
+                        <div id="loading" class="spinner-border text-white" role="status" style="height: 20px; width: 20px; display: none;">
+                            <span class="sr-only"></span>
+                        </div>
+                    </button>
+                    
+                </form>
+
             </div>
         </div>
 
@@ -99,8 +213,6 @@
                     <li style="display: inline;"><a href="http://knocard.com/termsofuse">Term of use</a></li>
                     <li style="display: inline;"><b><div class="hdiv"></div></b></li>
                     <li style="display: inline;"><a href="http://knocard.com/privacypolicy">Privacy Policy</a></li>
-                    <li style="display: inline;"><b><div class="hdiv"></div></b></li>
-                    <li style="display: inline;"><a target="_blank" href="https://davidjumola01.github.io/support.html">Support</a></li>
                 </ul>
             </div>
         </div>
@@ -108,5 +220,136 @@
     </div>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+
+        var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=Base64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9\+\/\=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/\r\n/g,"\n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}}
+        var freshDeskUrl = 'https://knocardllc.freshdesk.com/api/v2/tickets';
+        var token = Base64.encode('wMXXMGpA2CmTdd4JTk')
+        
+        $('.burger').on('click', function() {
+            $('.sidebar').show()
+        })
+
+        $('.close').on('click', function() {
+            $('.sidebar').hide()
+        })
+
+        $('.sb-item').each(function(){
+            $(this).on('click', function () {
+                $('.sidebar').hide()
+            });
+        });
+
+        function onSupportSelectChange() {
+            $('#titleErr').hide()
+            var selectedSupport = $('#support_select').children("option:selected").val()
+
+            console.log(selectedSupport);
+
+            if (selectedSupport === 'Technical Support' || selectedSupport === 'Report a Bug') {
+                $('#page_select').show()
+
+                if (selectedSupport === 'Report a Bug') {
+                    $('#report_bug').show()
+                } else {
+                    $('#report_bug').hide()
+                }
+            } else {
+                $('#page_select').hide()
+                $('#report_bug').hide()
+            }
+        }
+
+        function onPageChange() {
+            $('#pageErr').hide()
+        }
+
+        function onEmailChange() {
+            $('#emailErr').hide()
+        }
+
+        function clearErr() {
+            $('#titleErr').hide()
+            $('#pageErr').hide()
+            $('#emailErr').hide()
+            $('#descErr').hide()
+        }
+
+        function clearForm() {
+            $('#support_select').val('Please Select')
+            $('#selected_page').val('Please Select')
+            $('#email').val('')
+            $('#description').val('')
+
+            let deviceModel = $('#device').val()
+            let knocardVersion = $('#version').val()
+        }
+
+        $('#submit').on('click', function() {
+            let title = $('#support_select').children("option:selected").val()
+            let page = $('#selected_page').children("option:selected").val()
+            let email = $('#email').val()
+            let description = $('#description').val()
+
+            let deviceModel = $('#device').val()
+            let knocardVersion = $('#version').val()
+
+
+            if (title == "Please Select") {
+                $('#titleErr').show()
+                return
+            }
+
+            if (title == "Technical Support" && page == "Please Select") {
+                $('#pageErr').show()
+                return
+            }
+
+            if (email === '') {
+                $('#emailErr').show()
+                return
+            }
+
+            if (description === '') {
+                $('#descErr').show()
+                return
+            }
+
+            clearErr()
+            $('#submit_text').hide()
+            $('#loading').show()
+
+            let modelVersion = "Device Model: " + deviceModel + " KnoCard version: " + knocardVersion;
+
+            var data = {
+                description: title == "Report a Bug" ? modelVersion + "\n" + description : description,
+                subject: title == "Technical Support" ? title + " / Page - " + page : title,
+                email: email,
+                priority: 1,
+                status: 2,
+                type: title,
+            }
+
+            const response = fetch(freshDeskUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Basic '+ token + ':X'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                response.json()
+            })
+            .then(data => {
+                clearForm()
+                $('#submit_text').show()
+                $('#loading').hide()
+                $('#success').show()
+            });
+        })
+
+
+    </script>
 </body>
 </html>
